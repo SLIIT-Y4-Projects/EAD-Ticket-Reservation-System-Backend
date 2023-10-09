@@ -1,6 +1,18 @@
+using Microsoft.Extensions.Options;
+using MongoDB.Driver;
+using TicketReservationSystemAPI.Models;
+using TicketReservationSystemAPI.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.Configure<TicketReservationDatabaseSettings>(
+                builder.Configuration.GetSection(nameof(TicketReservationDatabaseSettings)));
+builder.Services.AddSingleton<ITicketReservationDatabaseSettings>(sp =>
+    sp.GetRequiredService<IOptions<TicketReservationDatabaseSettings>>().Value);
+builder.Services.AddSingleton<IMongoClient>(s =>
+        new MongoClient(builder.Configuration.GetValue<string>("TicketReservationDatabaseSettings:ConnectionString")));
+builder.Services.AddScoped <IExampleService, ExampleService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

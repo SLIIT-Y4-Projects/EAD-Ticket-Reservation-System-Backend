@@ -31,3 +31,17 @@ D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\obj\Debug\net7.0\refint
 D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\obj\Debug\net7.0\TicketReservationSystemAPI.pdb
 D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\obj\Debug\net7.0\TicketReservationSystemAPI.genruntimeconfig.cache
 D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\obj\Debug\net7.0\ref\TicketReservationSystemAPI.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\AWSSDK.Core.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\AWSSDK.SecurityToken.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\BCrypt.Net-Next.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\DnsClient.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\MongoDB.Bson.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\MongoDB.Driver.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\MongoDB.Driver.Core.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\MongoDB.Libmongocrypt.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\SharpCompress.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\Snappier.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\ZstdSharp.dll
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\runtimes\linux\native\libmongocrypt.so
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\runtimes\osx\native\libmongocrypt.dylib
+D:\GitHub\Y4S1\EAD\EAD-Ticket-Reservation-System-Backend\bin\Debug\net7.0\runtimes\win\native\mongocrypt.dll
