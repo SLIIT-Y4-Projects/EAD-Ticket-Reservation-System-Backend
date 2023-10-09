@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using TicketReservationSystemAPI.Identity;
 using TicketReservationSystemAPI.Models;
 using TicketReservationSystemAPI.Services;
 
@@ -6,6 +8,7 @@ using TicketReservationSystemAPI.Services;
 
 namespace TicketReservationSystemAPI.Controllers
 {
+    [Authorize(Policy = IdentityData.BackOfficePolicyName)] // Only users with the BACK_OFFICE claim can access this controller
     [Route("api/[controller]")]
     [ApiController]
     public class ExampleController : ControllerBase
@@ -18,6 +21,7 @@ namespace TicketReservationSystemAPI.Controllers
         }
 
         // GET: api/<ExampleController>
+        [AllowAnonymous] // Allow anonymous access to this endpoint (no JWT required)
         [HttpGet]
         public ActionResult<List<Example>> Get()
         {

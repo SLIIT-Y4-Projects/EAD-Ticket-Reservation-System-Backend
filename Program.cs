@@ -1,9 +1,38 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
 using MongoDB.Driver;
+using TicketReservationSystemAPI.Identity;
 using TicketReservationSystemAPI.Models;
 using TicketReservationSystemAPI.Services;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
+var config = builder.Configuration;
+
+// JWT
+builder.Services.AddAuthentication(x =>
+{
+    x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    x.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(x =>
+{
+    x.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters
+    {
+        ValidIssuer = config["JwtSettings:Issuer"],
+        ValidAudience = config["JwtSettings:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config["JwtSettings:Key"]!)),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateIssuerSigningKey = true,
+    };
+});
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy(IdentityData.BackOfficePolicyName, policy => policy.RequireClaim(IdentityData.BackOfficeClaimName, "true"));
+    options.AddPolicy(IdentityData.TravelAgentPolicyName, policy => policy.RequireClaim(IdentityData.TravelAgentClaimName, "true"));
+});
 
 // Add services to the container.
 builder.Services.Configure<TicketReservationDatabaseSettings>(
