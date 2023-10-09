@@ -29,6 +29,11 @@ namespace TicketReservationSystemAPI.Services
             return _backOfficeUsers.Find(backOfficeUser => backOfficeUser.Id == id).FirstOrDefault();
         }
 
+        public BackOfficeUser GetByUsername(string username)
+        {
+            return _backOfficeUsers.Find(backOfficeUser => backOfficeUser.Username == username).FirstOrDefault();
+        }
+
         public void Update(string id, BackOfficeUser backOfficeUser)
         {
             _backOfficeUsers.ReplaceOne(backOfficeUser => backOfficeUser.Id == id, backOfficeUser);

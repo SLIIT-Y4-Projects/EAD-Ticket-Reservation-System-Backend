@@ -91,18 +91,18 @@ namespace TicketReservationSystemAPI.Controllers
         [HttpPost("login")]
         public ActionResult<BackOfficeUser> Login([FromBody] BackOfficeUser request)
         {
-            var backOfficeUser = backOfficeUserService.Get(request.Id);
+            var backOfficeUser = backOfficeUserService.GetByUsername(request.Username);
 
             if (backOfficeUser == null)
             {
-                return NotFound($"BackOfficeUser with Id = {request.Id} not found");
+                return BadRequest("Invalid Credentials");
             }
 
             bool verified = BCrypt.Net.BCrypt.Verify(request.Password, backOfficeUser.Password);
 
             if (!verified)
             {
-                return BadRequest("Invalid password");
+                return BadRequest("Invalid Credentials");
             }
 
             string jwt = CreateToken(backOfficeUser);
