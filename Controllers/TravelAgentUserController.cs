@@ -107,7 +107,14 @@ namespace TicketReservationSystemAPI.Controllers
 
             string jwt = CreateToken(travelAgentUser);
 
-            return Ok(jwt);
+            return Ok(new
+            {
+                Id = travelAgentUser.Id,
+                NIC = travelAgentUser.Username,
+                FullName = travelAgentUser.FullName,
+                Token = jwt,
+                Role = IdentityData.TravelAgentClaimName
+            });
         }
 
         // PUT api/<TravelAgentUserController>/5

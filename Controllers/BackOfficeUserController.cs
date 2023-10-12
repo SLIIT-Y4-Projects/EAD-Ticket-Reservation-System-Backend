@@ -107,7 +107,14 @@ namespace TicketReservationSystemAPI.Controllers
 
             string jwt = CreateToken(backOfficeUser);
 
-            return Ok(jwt);
+            return Ok(new
+            {
+                Id = backOfficeUser.Id,
+                NIC = backOfficeUser.Username,
+                FullName = backOfficeUser.FullName,
+                Token = jwt,
+                Role = IdentityData.BackOfficeClaimName
+            });
         }
 
         // PUT api/<BackOfficeUserController>/5
