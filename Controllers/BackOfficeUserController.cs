@@ -110,7 +110,7 @@ namespace TicketReservationSystemAPI.Controllers
             return Ok(new
             {
                 Id = backOfficeUser.Id,
-                NIC = backOfficeUser.Username,
+                Username = backOfficeUser.Username,
                 FullName = backOfficeUser.FullName,
                 Token = jwt,
                 Role = IdentityData.BackOfficeClaimName
