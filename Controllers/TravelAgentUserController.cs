@@ -110,7 +110,7 @@ namespace TicketReservationSystemAPI.Controllers
             return Ok(new
             {
                 Id = travelAgentUser.Id,
-                NIC = travelAgentUser.Username,
+                Username = travelAgentUser.Username,
                 FullName = travelAgentUser.FullName,
                 Token = jwt,
                 Role = IdentityData.TravelAgentClaimName
