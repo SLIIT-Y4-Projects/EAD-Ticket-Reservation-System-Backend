@@ -1,4 +1,8 @@
-﻿using MongoDB.Driver;
+﻿/**
+ * @file BackOfficeUserService.cs
+ * @brief BackOfficeUser service
+ */
+using MongoDB.Driver;
 using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services

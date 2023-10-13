@@ -1,4 +1,8 @@
-﻿using TicketReservationSystemAPI.Models;
+﻿/**
+ * @file ITrainService.cs
+ * @brief Interface for Train service
+ */
+using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services
 {

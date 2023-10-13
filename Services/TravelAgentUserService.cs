@@ -1,4 +1,8 @@
-﻿using MongoDB.Driver;
+﻿/**
+ * @file TravelAgentUserService.cs
+ * @brief Implementation file for TravelAgentUser service
+ */
+using MongoDB.Driver;
 using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services

@@ -1,4 +1,8 @@
-﻿namespace TicketReservationSystemAPI.Models
+﻿/**
+ * @file TicketReservationDatabaseSettings.cs
+ * @brief This file contains the TicketReservationDatabaseSettings interface.
+ */
+namespace TicketReservationSystemAPI.Models
 {
     public interface ITicketReservationDatabaseSettings
     {
