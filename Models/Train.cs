@@ -19,8 +19,8 @@ namespace TicketReservationSystemAPI.Models
         [BsonElement("capacity")]
         public int Capacity { get; set; }
 
-        [BsonElement("reservations")]
-        public List<Reservation> Reservations { get; set; } = new List<Reservation>();
+        // [BsonElement("reservations")]
+        // public List<Reservation> Reservations { get; set; } = new List<Reservation>();
 
         [BsonElement("status")]
         public string Status { get; set; } = "INACTIVE";
