@@ -1,4 +1,8 @@
-﻿using MongoDB.Bson;
+﻿/**
+ * @file Train.cs
+ * @brief Model for Train
+ */
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace TicketReservationSystemAPI.Models

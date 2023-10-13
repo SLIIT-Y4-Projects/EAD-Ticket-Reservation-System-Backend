@@ -1,4 +1,8 @@
-﻿using MongoDB.Bson;
+﻿/**
+ * @file Reservation.cs
+ * @brief Model for Reservation
+ */
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace TicketReservationSystemAPI.Models
@@ -10,11 +14,8 @@ namespace TicketReservationSystemAPI.Models
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; } = String.Empty;
 
-        [BsonElement("referenceId")]
-        public string ReferenceId { get; set; } = String.Empty;
-
         [BsonElement("reservationDate")]
-        public DateTime ReservationDate { get; set; }
+        public string ReservationDate { get; set; } = String.Empty;
 
         [BsonElement("status")]
         public string Status { get; set; } = "ACTIVE";

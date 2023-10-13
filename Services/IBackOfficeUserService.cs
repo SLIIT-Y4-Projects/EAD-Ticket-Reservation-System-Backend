@@ -1,4 +1,8 @@
-﻿using TicketReservationSystemAPI.Models;
+﻿/**
+ * @file IBackOfficeUserService.cs
+ * @brief Interface for BackOfficeUser service
+ */
+using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services
 {

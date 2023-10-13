@@ -1,4 +1,8 @@
-﻿using MongoDB.Bson;
+﻿/**
+ * @file BackOfficeUser.cs
+ * @brief Model for BackOfficeUser
+ */
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace TicketReservationSystemAPI.Models

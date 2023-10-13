@@ -1,4 +1,8 @@
-﻿using MongoDB.Bson;
+﻿/**
+ * @file Example.cs
+ * @brief This is an example model used to demonstrate how to create a model.
+ */
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace TicketReservationSystemAPI.Models

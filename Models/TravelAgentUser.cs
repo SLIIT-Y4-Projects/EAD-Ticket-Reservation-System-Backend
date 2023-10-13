@@ -1,4 +1,8 @@
-﻿using MongoDB.Bson;
+﻿/**
+ * @file TravelAgentUser.cs
+ * @brief Model for TravelAgentUser
+ */
+using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
 
 namespace TicketReservationSystemAPI.Models

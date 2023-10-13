@@ -1,4 +1,8 @@
-﻿using TicketReservationSystemAPI.Models;
+﻿/**
+ * @file IExampleService.cs
+ * @brief Interface for Example service
+ */
+using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services
 {

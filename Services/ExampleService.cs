@@ -1,4 +1,8 @@
-﻿using MongoDB.Driver;
+﻿/**
+ * @file ExampleService.cs
+ * @brief Example service
+ */
+using MongoDB.Driver;
 using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services

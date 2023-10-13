@@ -1,4 +1,8 @@
-﻿using TicketReservationSystemAPI.Models;
+﻿/**
+ * @file ITravellerUserService.cs
+ * @brief Interface for TravellerUser service
+ */
+using TicketReservationSystemAPI.Models;
 
 namespace TicketReservationSystemAPI.Services
 {
