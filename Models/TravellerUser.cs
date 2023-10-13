@@ -18,5 +18,8 @@ namespace TicketReservationSystemAPI.Models
 
         [BsonElement("fullName")]
         public string FullName { get; set; } = String.Empty;
+
+        [BsonElement("status")]
+        public string Status { get; set; } = "INACTIVE";
     }
 }

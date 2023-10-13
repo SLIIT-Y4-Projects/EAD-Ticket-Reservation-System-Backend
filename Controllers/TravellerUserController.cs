@@ -105,6 +105,11 @@ namespace TicketReservationSystemAPI.Controllers
                 return BadRequest("Invalid Credentials");
             }
 
+            if (travellerUser.Status == "INACTIVE")
+            {
+                return BadRequest("Account is inactive please contact back office");
+            }
+
             string jwt = CreateToken(travellerUser);
 
             return Ok(new
@@ -147,6 +152,36 @@ namespace TicketReservationSystemAPI.Controllers
             travellerUserService.Remove(travellerUser.Id);
 
             return Ok($"TravellerUser with Id = {id} deleted");
+        }
+
+        [HttpPut("activate/{id}")]
+        public ActionResult Activate(string id)
+        {
+            var travellerUser = travellerUserService.Get(id);
+
+            if (travellerUser == null)
+            {
+                return NotFound($"TravellerUser with Id = {id} not found");
+            }
+
+            travellerUserService.Activate(travellerUser.Id);
+
+            return NoContent();
+        }
+
+        [HttpPut("deactivate/{id}")]
+        public ActionResult Deactivate(string id)
+        {
+            var travellerUser = travellerUserService.Get(id);
+
+            if (travellerUser == null)
+            {
+                return NotFound($"TravellerUser with Id = {id} not found");
+            }
+
+            travellerUserService.Deactivate(travellerUser.Id);
+
+            return NoContent();
         }
     }
 }
