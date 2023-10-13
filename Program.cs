@@ -32,6 +32,7 @@ builder.Services.AddAuthorization(options =>
 {
     options.AddPolicy(IdentityData.BackOfficePolicyName, policy => policy.RequireClaim(IdentityData.BackOfficeClaimName, "true"));
     options.AddPolicy(IdentityData.TravelAgentPolicyName, policy => policy.RequireClaim(IdentityData.TravelAgentClaimName, "true"));
+    options.AddPolicy(IdentityData.TravellerPolicyName, policy => policy.RequireClaim(IdentityData.TravellerClaimName, "true"));
 });
 
 // Add services to the container.
@@ -44,6 +45,7 @@ builder.Services.AddSingleton<IMongoClient>(s =>
 builder.Services.AddScoped <IExampleService, ExampleService>();
 builder.Services.AddScoped <IBackOfficeUserService, BackOfficeUserService>();
 builder.Services.AddScoped <ITravelAgentUserService, TravelAgentUserService>();
+builder.Services.AddScoped <ITravellerUserService, TravellerUserService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
