@@ -12,6 +12,7 @@ namespace TicketReservationSystemAPI.Services
 
         private readonly IMongoCollection<Example> _examples;
 
+        // Constructor
         public ExampleService(ITicketReservationDatabaseSettings settings, IMongoClient mongoClient)
         {
             var database = mongoClient.GetDatabase(settings.DatabaseName);
