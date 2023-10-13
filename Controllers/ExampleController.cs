@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿/**
+ * @file ExampleController.cs
+ * @brief Controller for Example
+ */
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicketReservationSystemAPI.Identity;
 using TicketReservationSystemAPI.Models;

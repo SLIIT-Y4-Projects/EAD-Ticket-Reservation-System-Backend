@@ -1,4 +1,8 @@
-﻿namespace TicketReservationSystemAPI.Identity
+﻿/**
+ * @file IdentityData.cs
+ * @brief Identity data class
+ */
+namespace TicketReservationSystemAPI.Identity
 {
     public class IdentityData
     {
