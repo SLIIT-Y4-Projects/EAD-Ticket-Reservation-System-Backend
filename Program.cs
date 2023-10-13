@@ -46,6 +46,8 @@ builder.Services.AddScoped <IExampleService, ExampleService>();
 builder.Services.AddScoped <IBackOfficeUserService, BackOfficeUserService>();
 builder.Services.AddScoped <ITravelAgentUserService, TravelAgentUserService>();
 builder.Services.AddScoped <ITravellerUserService, TravellerUserService>();
+builder.Services.AddScoped <ITrainService, TrainService>();
+builder.Services.AddScoped <IReservationService, ReservationService>();
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
