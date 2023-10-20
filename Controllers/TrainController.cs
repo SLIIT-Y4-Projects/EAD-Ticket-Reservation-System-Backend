@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/**
+ * @file TrainController.cs
+ * @brief Controller for Train
+ */
+using Microsoft.AspNetCore.Mvc;
 using TicketReservationSystemAPI.Models;
 using TicketReservationSystemAPI.Services;
 

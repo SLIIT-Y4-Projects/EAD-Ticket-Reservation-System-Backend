@@ -1,4 +1,8 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿/**
+ * @file ReservationController.cs
+ * @brief Controller for Reservation
+ */
+using Microsoft.AspNetCore.Mvc;
 using TicketReservationSystemAPI.Models;
 using TicketReservationSystemAPI.Services;
 
