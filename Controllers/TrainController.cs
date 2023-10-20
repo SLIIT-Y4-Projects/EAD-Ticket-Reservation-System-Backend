@@ -2,6 +2,7 @@
  * @file TrainController.cs
  * @brief Controller for Train
  */
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TicketReservationSystemAPI.Models;
 using TicketReservationSystemAPI.Services;
@@ -10,6 +11,7 @@ using TicketReservationSystemAPI.Services;
 
 namespace TicketReservationSystemAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TrainController : ControllerBase

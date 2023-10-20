@@ -2,6 +2,7 @@
  * @file TravelAgentUserController.cs
  * @brief Controller for TravelAgentUser
  */
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,6 +16,7 @@ using TicketReservationSystemAPI.Services;
 
 namespace TicketReservationSystemAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TravelAgentUserController : ControllerBase
@@ -80,6 +82,7 @@ namespace TicketReservationSystemAPI.Controllers
         }
 
         // POST api/<TravelAgentUserController>/register
+        [AllowAnonymous]
         [HttpPost("register")]
         public ActionResult<TravelAgentUser> Register([FromBody] TravelAgentUser request)
         {
@@ -92,6 +95,7 @@ namespace TicketReservationSystemAPI.Controllers
         }
 
         // POST api/<TravelAgentUserController>/login
+        [AllowAnonymous]
         [HttpPost("login")]
         public ActionResult<TravelAgentUser> Login([FromBody] TravelAgentUser request)
         {
