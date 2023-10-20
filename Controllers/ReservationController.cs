@@ -2,7 +2,9 @@
  * @file ReservationController.cs
  * @brief Controller for Reservation
  */
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using TicketReservationSystemAPI.Identity;
 using TicketReservationSystemAPI.Models;
 using TicketReservationSystemAPI.Services;
 
@@ -10,6 +12,7 @@ using TicketReservationSystemAPI.Services;
 
 namespace TicketReservationSystemAPI.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class ReservationController : ControllerBase
