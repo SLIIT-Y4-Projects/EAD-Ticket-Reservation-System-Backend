@@ -2,6 +2,7 @@
  * @file BackOfficeUserController.cs
  * @brief Controller for BackOfficeUser
  */
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
@@ -15,6 +16,7 @@ using TicketReservationSystemAPI.Services;
 
 namespace TicketReservationSystemAPI.Controllers
 {
+    [Authorize(Policy = IdentityData.BackOfficePolicyName)]
     [Route("api/[controller]")]
     [ApiController]
     public class BackOfficeUserController : ControllerBase
@@ -80,6 +82,7 @@ namespace TicketReservationSystemAPI.Controllers
         }
 
         // POST api/<BackOfficeUserController>/register
+        [AllowAnonymous]
         [HttpPost("register")]
         public ActionResult<BackOfficeUser> Register([FromBody] BackOfficeUser request)
         {
@@ -92,6 +95,7 @@ namespace TicketReservationSystemAPI.Controllers
         }
 
         // POST api/<BackOfficeUserController>/login
+        [AllowAnonymous]
         [HttpPost("login")]
         public ActionResult<BackOfficeUser> Login([FromBody] BackOfficeUser request)
         {
